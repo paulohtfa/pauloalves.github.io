@@ -1,0 +1,42 @@
+/* Shared project case-study layout: all ten panels. */
+.case-modal-panel.case-modal-panel{background:#f8fafc;color:#1c3049}
+.case-modal-panel .case-study{display:grid;grid-template-columns:minmax(0,0.81fr) minmax(0,1fr);height:min(90dvh,850px);min-height:0;background:#f8fafc;color:#20334e;}
+.case-modal-panel .case-media{min-width:0;padding:18px 18px 16px;background:#f0f3f7;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.case-modal-panel .case-image-open{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #d3dce7;border-radius:9px;min-height:0;flex:0 1 auto;width:100%;height:54vh;max-height:515px;padding:13px;cursor:zoom-in;box-shadow:none}
+.case-modal-panel .case-image-open img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;display:block}
+.case-modal-panel .case-image-caption{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#6d8199;font-size:12px;letter-spacing:.01em;padding:0 3px}
+.case-modal-panel .case-thumbnails{display:flex;gap:9px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b5c7db transparent;padding:3px 2px 10px;max-width:100%;flex-shrink:0;scroll-snap-type:x proximity}
+.case-modal-panel .case-thumb{flex:0 0 88px;width:88px;height:72px;padding:5px;border:2px solid #cdd9e5;border-radius:8px;background:#fff;cursor:pointer;scroll-snap-align:start;transition:border-color .16s,box-shadow .16s}
+.case-modal-panel .case-thumb img{display:block;width:100%;height:100%;object-fit:contain}
+.case-modal-panel .case-thumb.is-active{border-color:#2677b9;box-shadow:0 0 0 2px rgba(38,119,185,.13)}
+.case-modal-panel .case-thumb:hover{border-color:#4f9bd0}
+.case-modal-panel .case-thumb:focus-visible{outline:3px solid #5da3df;outline-offset:2px}
+.case-modal-panel .case-information{min-width:0;padding:24px 27px 20px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#bdcddd transparent}
+.case-modal-panel .case-heading{padding:0 26px 11px 0}
+.case-modal-panel .case-eyebrow{font-size:11px;color:#6a7e95;font-weight:700;letter-spacing:.13em}
+.case-modal-panel .case-heading h2{font-size:clamp(23px,2.2vw,32px);font-weight:700;line-height:1.2;letter-spacing:-.025em;margin:7px 0 0;color:#1b314c}
+.case-modal-panel .case-role{display:flex;gap:13px;align-items:center;padding:10px 14px;border-radius:8px;background:#e7eef7;margin-bottom:12px;border:1px solid #d5e1ef}
+.case-modal-panel .case-role-icon{font-size:21px;color:#2b699f}
+.case-modal-panel .case-role h3,.case-modal-panel .case-section h3{font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:.07em;color:#203b58;margin:0 0 6px}
+.case-modal-panel .case-role p{font-size:14px;color:#667b92;margin:0;font-style:italic;line-height:1.45}
+.case-modal-panel .case-section{border-bottom:1px solid #dce4ed;padding:0 0 10px;margin:0 0 11px}
+.case-modal-panel .case-section:last-child{border-bottom:0;margin-bottom:0}
+.case-modal-panel .case-section p{font-size:14px;line-height:1.48;letter-spacing:0;color:#40556b;text-align:left;margin:0}
+.case-modal-panel .case-section .case-pending{font-style:italic;color:#77889a}
+.case-lightbox:not([hidden]){position:fixed;inset:0;z-index:100000;background:rgba(10,20,34,.95);display:flex;align-items:center;justify-content:center;padding:60px 25px 30px}
+.case-lightbox img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.case-lightbox-close{position:absolute;right:22px;top:13px;color:white;background:transparent;border:0;font:34px/1 Arial;cursor:pointer;padding:9px 15px}
+.case-modal-panel .case-image-open:focus-visible,.case-lightbox-close:focus-visible{outline:3px solid #5da3df;outline-offset:3px}
+@media(max-width:850px){.case-modal-panel .case-study{display:flex;flex-direction:column;max-height:90dvh;height:auto;min-height:0;overflow-y:auto}.case-modal-panel .case-media{padding:16px;flex-shrink:0}.case-modal-panel .case-image-open{height:34vh;max-height:350px}.case-modal-panel .case-thumb{flex-basis:74px;width:74px;height:62px}.case-modal-panel .case-information{padding:25px 22px;overflow:visible}.case-modal-panel .case-heading h2{font-size:24px}}
+@media(max-width:420px){.case-modal-panel .case-image-open{height:29vh}.case-modal-panel .case-information{padding:22px 18px}.case-modal-panel .case-section p{font-size:13px}}
+
+.case-modal-panel .case-video-link{display:inline-block;margin:4px 3px;color:#27689e;font-size:13px;font-weight:700;text-decoration:none}
+.case-modal-panel .case-video-link:hover{text-decoration:underline}
+
+/* Position identifies formal status; My Role describes individual technical contributions. */
+.case-modal-panel .case-position{margin-bottom:8px;padding:0 1px}
+.case-modal-panel .case-position h3{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#6a7e95;margin:0 0 2px}
+.case-modal-panel .case-position p{font-size:13px;font-weight:600;line-height:1.35;color:#244460;margin:0}
+.case-modal-panel .case-role{align-items:flex-start}
+.case-modal-panel .case-role .case-role-title{font-size:13px;line-height:1.35;font-style:normal;font-weight:700;color:#244460;margin:0 0 4px}
+.case-modal-panel .case-role .case-role-description{font-size:13px;line-height:1.43;font-style:normal;color:#40556b;margin:0}

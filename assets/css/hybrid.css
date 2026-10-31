@@ -1,0 +1,45 @@
+/* Hybrid Engineering homepage v1. Existing modal/project styles are preserved. */
+body {background:#f2f5f8;color:#23364a;}
+.page-shell {width:100%;margin:0;padding:0 0 5rem;}
+.home-landing {gap:0;}
+.site-nav {display:flex;align-items:center;justify-content:flex-end;padding:1.15rem max(4vw,calc((100vw - 1320px)/2));background:#14253a;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);}
+.site-brand {color:#fff;text-decoration:none;font-weight:800;font-size:.9rem;letter-spacing:.17em;}
+.nav-links {display:flex;gap:2rem;}
+.nav-links a {color:#d4e0ee;text-decoration:none;font-size:.76rem;font-weight:600;letter-spacing:.045em;}
+.nav-links a:hover {color:#fff;}
+.hero {background:linear-gradient(110deg,rgba(18,34,53,.95),rgba(24,49,74,.93)),url('../../images/background.png') center/cover;padding-bottom:0;}
+.hero-copy {max-width:1320px;margin:auto;padding:3.1rem 3.3rem 3.4rem;background:transparent;border:0;box-shadow:none;backdrop-filter:none;}
+.hero-copy::before {display:none;}
+.hero-kicker {font-size:.78rem;color:#8ec7f0;opacity:1;margin-bottom:1.2rem;letter-spacing:.13em;}
+.hero h1 {font-size:clamp(2.7rem,5.1vw,4.5rem);letter-spacing:-.045em;font-weight:700;color:#fff;line-height:1.05;}
+.hero h2 {font-size:clamp(1.45rem,2.7vw,2.45rem);font-weight:500;color:#c5d8e9;letter-spacing:-.02em;margin:.65rem 0 1.05rem;}
+.hero p {font-size:.88rem;font-weight:500;letter-spacing:.06em;text-transform:none;color:#c6d4e2;}
+.hero-actions {position:relative;z-index:2;display:flex;gap:.9rem;margin-top:1.7rem;}
+.hero-button {display:inline-block;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:.9rem 1.3rem;border-radius:5px;font-size:.85rem;font-weight:700;}
+.hero-button.primary {background:#e4f0fc;color:#193149;border-color:#e4f0fc;}
+.hero-button.secondary {background:transparent;color:#fff;}
+.home-groups {max-width:1320px;width:92%;margin:0 auto;gap:4rem;padding-top:4.2rem;}
+.home-group {gap:1.35rem;scroll-margin-top:1.5rem;}
+.group-header {border-bottom:1px solid #ccd7e1;padding:0 0 1.1rem;}
+.group-header h3 {font-size:1.45rem;color:#172c41;letter-spacing:-.02em;text-transform:none;font-weight:800;}
+.group-description {margin:.55rem 0 0;color:#64778b;font-size:.86rem;}
+.tiles-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;}
+.tile {background:#fff;color:#22354a;border:1px solid #dde6ee;border-radius:8px;box-shadow:0 6px 18px rgba(26,49,74,.06);backdrop-filter:none;}
+.tile::before {display:none;}
+.tile:hover {background:#fff;border-color:#a8c4dc;box-shadow:0 15px 32px rgba(24,47,69,.13);}
+.tile::after {color:#63829e;}
+.tile:hover::after {color:#264b72;}
+.tile-media {display:flex;flex-direction:column;align-items:stretch;min-height:0;}
+.tile-figure {width:100%;height:195px;margin:0;background:#e9eff4;border-radius:0;box-shadow:none;}
+.tile-figure img {width:100%;height:100%;object-fit:cover;}
+.tile-copy {min-height:84px;padding:1rem 2rem 1.15rem 1.2rem;align-items:flex-start;}
+.tile-copy span {font-size:.88rem;font-weight:700;line-height:1.42;}
+.tile-copy-inner {gap:0;}
+.tile-number {display:none!important;}
+#expertise .tile-figure,#information .tile-figure,#publications .tile-figure {height:145px;}
+#expertise .tile-copy,#information .tile-copy,#publications .tile-copy {min-height:65px;}
+.tile:focus-visible,.hero-button:focus-visible,.nav-links a:focus-visible {outline:3px solid #65aee2;outline-offset:3px;}
+@media(max-width:850px){.tiles-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.hero-copy{padding:2.8rem 5vw 3.1rem;}.site-nav{padding:1.3rem 4vw}.nav-links{gap:1rem;}}
+@media(max-width:600px){.tiles-grid{grid-template-columns:1fr;}.tile-figure{height:210px;}.nav-links{gap:.7rem;flex-wrap:wrap;justify-content:flex-end}.nav-links a{font-size:.65rem}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.site-brand{font-size:.72rem}.hero h1{font-size:2.65rem}.hero h2{font-size:1.45rem}.hero-actions{flex-wrap:wrap}.home-groups{padding-top:2.7rem;gap:3rem}.group-header h3{font-size:1.3rem}}
+
+@media(max-width:600px){.hero-copy{padding:2.3rem 5vw 2.6rem;}.hero-actions{margin-top:1.4rem;}}
